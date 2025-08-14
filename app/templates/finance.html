@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Finance Dashboard{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-5">
+    <h1 class="mb-0">Finance Dashboard</h1>
+    <div class="text-muted">Updated just now</div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header text-light">
+                Stock Market
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-4">
+                    <input type="text" class="form-control" placeholder="Search stocks (e.g., AAPL, MSFT)" id="stock-search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
+                <div id="finance-data">
+                    <div class="text-center py-5">
+                        <h4 class="text-muted mb-3">Search for stock symbols</h4>
+                        <p class="text-muted">Get real-time stock market data by searching above</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header text-light">
+                Budget Summary
+            </div>
+            <div class="card-body">
+                <canvas id="finance-chart" width="100%" height="250"></canvas>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">Monthly Budget</span>
+                        <span class="fw-medium text-light">$2,500</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">Spent</span>
+                        <span class="fw-medium text-light">$1,200</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Remaining</span>
+                        <span class="fw-medium text-success">$1,300</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span class="text-light">Recent Transactions</span>
+                <button class="btn btn-sm btn-outline-primary">Add Transaction</button>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-light">Date</th>
+                                <th class="text-light">Description</th>
+                                <th class="text-light">Amount</th>
+                                <th class="text-light">Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Today</td>
+                                <td>Grocery Store</td>
+                                <td class="text-danger">-$85.50</td>
+                                <td>Food</td>
+                            </tr>
+                            <tr>
+                                <td>Yesterday</td>
+                                <td>Internet Bill</td>
+                                <td class="text-danger">-$59.99</td>
+                                <td>Utilities</td>
+                            </tr>
+                            <tr>
+                                <td>May 15</td>
+                                <td>Paycheck</td>
+                                <td class="text-success">+$2,500.00</td>
+                                <td>Income</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

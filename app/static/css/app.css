@@ -1,0 +1,157 @@
+:root {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --dark-1: #0f172a;
+    --dark-2: #1e293b;
+    --dark-3: #334155;
+    --light: #f8fafc;
+    --gray: #94a3b8;
+    --gray-dark: #64748b;
+}
+
+body.dark-mode {
+    font-family: 'Inter', sans-serif;
+    color: var(--light);
+    background-color: var(--dark-1);
+    line-height: 1.6;
+}
+
+.navbar {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--dark-3);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--gray);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    background-color: var(--dark-2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--dark-3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    background-color: var(--dark-2);
+    border-bottom: 1px solid var(--dark-3);
+    font-weight: 600;
+    color: var(--light);
+    padding: 1rem 1.5rem;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.card-body {
+    padding: 1.5rem;
+    color: var(--gray);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--dark-3);
+}
+
+.progress-bar {
+    background-color: var(--primary);
+}
+
+.table {
+    color: var(--gray);
+    background-color: var(--dark-2);
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--light);
+    background-color: var(--dark-3);
+    border-bottom: 1px solid var(--dark-3);
+}
+
+.table td {
+    border-top: 1px solid var(--dark-3);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--light);
+}
+
+.text-muted {
+    color: var(--gray-dark) !important;
+}
+
+.text-success {
+    color: #10b981 !important;
+}
+
+.text-danger {
+    color: #ef4444 !important;
+}
+
+.bg-dark-2 {
+    background-color: var(--dark-2);
+}
+
+.form-control {
+    background-color: var(--dark-3);
+    border: 1px solid var(--dark-3);
+    color: var(--light);
+}
+
+.form-control:focus {
+    background-color: var(--dark-3);
+    color: var(--light);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
