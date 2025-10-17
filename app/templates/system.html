@@ -56,31 +56,8 @@
     </div>
     
     <div class="col-md-6">
-        <div class="card">
-            <div class="card-header text-light">
-                System Information
-            </div>
-            <div class="card-body">
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <th class="text-muted">Hostname</th>
-                            <td id="hostname" class="text-light">Loading...</td>
-                        </tr>
-                        <tr>
-                            <th class="text-muted">OS</th>
-                            <td id="os-info" class="text-light">Loading...</td>
-                        </tr>
-                        <tr>
-                            <th class="text-muted">Uptime</th>
-                            <td id="uptime" class="text-light">Loading...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
     </div>
-    
     <div class="col-md-6">
         <div class="card">
             <div class="card-header text-light">
@@ -129,12 +106,7 @@ function updateSystemInfo() {
             document.getElementById('memory-percent').textContent = `${data.memory.percent.toFixed(1)}%`;
             document.getElementById('memory-usage').style.width = `${data.memory.percent}%`;
             document.getElementById('memory-used').textContent = formatBytes(data.memory.used);
-            document.getElementById('memory-available').textContent = formatBytes(data.memory.available);
-            
-            // System Info
-            document.getElementById('hostname').textContent = data.system.hostname;
-            document.getElementById('os-info').textContent = `${data.system.os} ${data.system.release} (${data.system.machine})`;
-            document.getElementById('uptime').textContent = data.system.uptime;
+            document.getElementById('memory-available').textContent = formatBytes(data.memory.available);           
             
             // Disk Info
             document.getElementById('disk-usage').style.width = `${data.disk.percent}%`;
